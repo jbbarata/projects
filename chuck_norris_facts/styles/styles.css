@@ -1,0 +1,126 @@
+:root {
+    --br: 6px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    background-color: hsl(34, 53%, 82%);
+    background: radial-gradient(black 3px, transparent 4px),
+      radial-gradient(black 3px, transparent 4px),
+      linear-gradient(#fff 4px, transparent 0),
+      linear-gradient(
+        45deg,
+        transparent 74px,
+        transparent 75px,
+        #a4a4a4 75px,
+        #a4a4a4 76px,
+        transparent 77px,
+        transparent 109px
+      ),
+      linear-gradient(
+        -45deg,
+        transparent 75px,
+        transparent 76px,
+        #a4a4a4 76px,
+        #a4a4a4 77px,
+        transparent 78px,
+        transparent 109px
+      ),
+      #fff;
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+
+    display: grid;
+    place-items: center;
+  }
+
+  .card {
+    color: #000;
+    text-align: center;
+    border-radius: var(--br);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card * + * {
+    margin-top: 1rem;
+  }
+
+  .title {
+    font-weight: normal;
+    font-size: 2.1rem;
+    background-color: lightblue;
+    padding: 1rem;
+  }
+
+  .fact {
+    padding: 1rem;
+    background-color: hsl(0, 0%, 80%);
+    font-size: 1.3rem;
+    line-height: 1.2;
+    max-width: 40ch;
+  }
+
+  .fact::before {
+    content: "Fact: ";
+    font-weight: bold;
+  }
+
+  .btn {
+    border: 0;
+    border-radius: inherit;
+    color: #fff;
+    background-color: coral;
+    padding: 0.5em 0.8em;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    box-shadow: 0 5px 0 hsl(0, 0%, 10%);
+    margin: 1.8rem 0;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    background-color: yellowgreen;
+    box-shadow: 0 2px 0 hsl(0, 0%, 10%);
+    transform: translateY(5px);
+  }
+
+  img {
+    border-radius: 15%;
+    max-width: 100%;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+
+  @keyframes shake {
+    0% {
+      transform: rotate(1) scale(1);
+    }
+    33% {
+      transform: rotate(5deg) scale(1.1);
+    }
+    66% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(1) scale(1);
+    }
+  }
+
+  .shake-it {
+    animation: shake 0.5s ease-in-out alternate;
+  }
