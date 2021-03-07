@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Canvas Paint app</title>
+        <script src="scripts/scripts.js" defer></script>
+        <style>
+            main {max-width: 906px; margin: 0 auto; padding-top: 100px;}
+
+            canvas {border: 3px dashed #000;}
+        </style>
+    </head>
+    <body>
+        <main>
+            <canvas width="900" height="900"></canvas>
+            <select name="colorPicker" aria-label="Escolher cor">
+                <option value="#000">Black</option>
+                <option value="#fff">White - Eraser</option>
+                <option value="#F00">Red</option>
+                <option value="#0F0">Light green</option>
+                <option value="#060">Dark Green</option>
+                <option value="#00F">Blue</option>
+                <option value="#F0F">Pink</option>
+                <option value="#FF0">Yellow</option>
+                <option value="#CCC">Light grey</option>
+                <option value="#333">Dark grey</option>
+            </select>
+            <select name="lineWidthPicker" aria-label="Line thickness">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>5</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>30</option>
+                <option>35</option>
+                <option>40</option>
+                <option>45</option>
+                <option>50</option>
+            </select>
+            <button type="button" id="Reset">New</button>
+        </main>
+    </body>
+</html>
