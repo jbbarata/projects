@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    transition: all .5s ease;
+}
+
+/* Components */
+
+.btn {
+    display: inline-block;
+    background-color: #ff7800;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: .5rem 1.5rem;
+    text-decoration: none;
+    transition: all .4s ease;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn-inverted {
+    background-color: transparent;
+    border: 2px solid #727272;
+    color: #ff7800;
+}
+
+.btn-inverted:hover {
+    background-color: #727272;
+    color: #fff;
+}
+
+.unstyled-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: 1.6rem;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.card {
+    padding: 1rem 1.75rem;
+}
+
+.card-header {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-icon {
+    margin-right: 1.5rem;
+    position: relative;
+}
+
+.card-icon::before,
+.card-icon::after {
+    background-color: #727272;
+    border-radius: 50%;
+    content: "";
+    opacity: .2;
+    position: absolute;
+    left: -3px;
+    top: -2px;
+    height: 0.9rem;
+    width: 0.9rem;
+    z-index: -1;
+}
+
+
+.card-icon::after {
+    bottom: -1px;
+    right: -11px;
+    height: 1.75rem;
+    width: 1.75rem;
+    top: unset;
+}
+
+
+/* Site header */
+
+.site-header {
+    background-color: #0E1111;
+    display: flex;
+    padding: 1.4rem 7%;
+    justify-content: space-between; /*afasta elementos horizontalmente*/
+    align-items: center; /*alinha os elementos ao centro verticalmente*/
+}
+
+.menu,
+.site-header .btn {
+    display: none;
+}
+
+.branding {
+    margin: 0 1rem 0 0;
+    width: 10rem;
+}
+
+.hamburguer-menu {
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.menu li {
+    margin-right: 1.3rem;
+}
+
+.menu a {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    opacity: .6;
+}
+
+/* Hero */
+
+.hero {
+    align-items: center;
+    background: grey url('/images/background.jpg') no-repeat center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 3.75rem 2.5rem 6.2rem;
+    position: relative;
+    text-align: center;
+}
+
+.hero::before {
+    bottom: 0;
+    background: linear-gradient(81.48deg, #000000 5.97%, rgba(123, 41, 121, 0.9) 94.81%);
+    content: "";
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.hero > * {
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+    max-width: 53rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 1rem;
+    max-width: 40rem;
+}
+
+/**** Site footer ****/
+
+.icons {
+    display: inline-flex;
+    list-style: none;
+    margin: 1rem;
+    max-width: 2rem;
+}
+
+i {
+    color: #fff;
+}
+
+.profiles, .end, .social {
+    background-color: #0E1111;
+    padding-left: 0;
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+.rights {
+    color: #fff;
+    padding-bottom: 3rem;
+    text-align: center;
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+
+
+/**** Card container ****/
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));/*quando cabe é 1fr quando encolhemos mais não passa dos 18.75. é para isto que serve o minmax*/
+    grid-gap: 2rem;
+    max-width: 1280px;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+/*Faqs*/
+
+.btn-faq {
+    text-align: left;
+    border: 0;
+    cursor: pointer;
+    color: #0E1111;
+    padding: 10px 20px;
+    background: none;
+    font-size: 1.4rem;
+}
+
+.btn-faq:hover, .btn-faq:focus {
+    background-color: none;
+}
+
+.faq.active + p { 
+    display: block;
+}
+
+
+.faq.active .icon-open {
+    display: none;
+}
+
+.faq.active .icon-close {
+    display: inline;
+}
+
+.icon-close {
+    display: none;
+}
+
+.faq-text { 
+    margin: 1rem 0;
+    padding: 1rem 0;
+}
+
+.community .faq-text {
+    line-height: 1.2;
+    display: none;
+    padding: 0 3.75rem;
+}
+
+.community h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section.community {
+    margin: 3.75rem 0;
+    padding: 0 2rem;
+}
+
+div.faq {
+    text-align: center;
+}
+
+/*Modules*/
+
+.modules {
+    margin: 3.75rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/**** Media Queries ****/
+
+/* screen define o que é, pode ser print. e temos de ter and ou or*/
+
+@media screen and (min-width: 800px) {
+    
+    .title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    .hero {
+        min-height: calc(100vh - 90px);
+        justify-content: center;
+    }
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    .community h2 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    svg {
+        cursor: pointer;
+    }
+
+}
+
+@media screen and (min-width: 1250px) {
+    .site-header .btn {
+        display: inline-block;
+}
+    .menu {
+        display: flex;
+    }
+    .hamburguer-menu {
+        display: none;
+}
+    .branding {
+        width: 8.5rem;
+}
+.hero {
+    min-height: calc(100vh - 94px);
+}
+.hero h2 {
+    font-size: 3.2rem;
+}
+.community h2 {
+    font-size: 3.2rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+}
